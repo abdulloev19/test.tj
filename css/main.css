@@ -1,0 +1,327 @@
+/* Жирный */
+@font-face {
+	font-family: 'FontName bold'; 
+	src: url(../static/Caveat-Bold.ttf); 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    color: #008dc5;
+    transition: all .5s;
+
+}
+body{
+    background-color: #dde1e7;
+}
+
+.container, .container-drog{
+    max-width: 1170px;
+    height: 800px;
+    margin: 15px auto;
+    margin-top: 30px;
+    margin-bottom: 0;
+    background-color: #dde1e7;
+    box-shadow: 3px 3px 7px rgba(94,104,121, .288), -3px -3px 5px rgba(94,104,121, .288);
+    border-radius: 10px;
+}
+
+.header{
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    color: #000;
+    background-color: #dde1e7;
+    box-shadow:  -3px -3px 7px #ffffff73,   3px 3px 5px rgba(94,104,121, .288);
+}
+
+.header > h3 {
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #008dc5;
+    border-bottom: 1px solid transparent;
+	font-family: 'FontName bold'; 
+}
+
+.header > h3:not(:first-child){
+    border-left: 1px solid rgba(94,104,121, .288);
+}
+
+.header > h3:hover{
+    color: tomato;
+}
+
+.result{
+    width: 1170px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    line-height: 25px;
+    color: #008dc5;
+    text-align: center;
+    background: none;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: inset 3px 3px 7px #ffffff73, inset -3px -3px 5px rgba(94,104,121, .288);
+}
+.top{
+    width: 1170px;
+    height: 200px;
+    color: #dde1e7;
+    box-shadow: inset 3px 3px 7px #ffffff73, inset -3px -3px 5px rgba(94,104,121, .288);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.top p {
+    text-align: center;
+    display: block;
+    font-size: 18px;
+    margin: 10px;
+    width: 1130px;
+    height: 170px;
+    overflow: auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #008dc518;
+    border-radius: 5px;
+}
+
+.table::-webkit-scrollbar,.top p::-webkit-scrollbar {
+    width: 3px;
+}
+.table::-webkit-scrollbar-thumb,.top p::-webkit-scrollbar-thumb {
+  background: #008dc5;
+}
+
+.test{
+    width: 1170px;
+    height: 570px;
+    padding: 40px;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    box-shadow:  inset -3px -3px 5px rgba(94,104,121, .288), inset 3px 3px 5px rgba(94,104,121, .288);
+
+}
+.test button{
+    background: none;
+    border-radius: 5px;
+    border-color: teal;
+    border: none;
+    box-shadow: inset -3px -3px 7px #ffffff73, inset 3px 3px 5px rgba(94,104,121, .288);
+    transition: all .5s;
+}
+.test button:hover{
+    box-shadow: -3px -3px 7px rgba(65, 128, 236, 0.188), 3px 3px 5px rgba(87, 205, 175, 0.288);
+}
+
+.time{
+    position: fixed;
+    left: 20px;
+    top: 10px;
+}
+
+.container > h2 {
+    text-align: center;
+    color:  #008dc5;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    color: tomato;
+}
+
+.container > h3 {
+    text-align: center;
+    padding-top: 100px;
+    font-size: 35px;
+}
+.container > h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.container > p {
+    text-align: center;
+    letter-spacing: normal;
+    margin-top: 20px;
+    padding: 0 200px;
+}
+
+.container > a > p {
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+a{
+    text-decoration: none;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.modal-window{
+    width: 1070px;
+    background-color: #fff;
+    height: 750px;
+    margin: 90px auto;
+    box-shadow: 3px 3px 10px #000;
+}
+
+.modal-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: #008dc5;
+    padding: 0 20px;
+}
+
+.modal-header span{
+    font-size: 20px;
+}
+
+.modal-header h3, .modal-header span{
+    color: #fff;
+}
+
+.modal-header span:hover{
+    transform: scale(1.3);
+}
+
+.close{
+    width: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.table{
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-x: auto;
+
+}
+
+.content-table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.content-table thead tr{
+    text-align: left;
+}
+.content-table th, .content-table td{
+    padding: 12px 10px;
+}
+
+.content-table tbody {
+    border: 1px solid #008dc5;
+}
+.content-table tbody tr {
+    border-bottom: 1px solid #008dc5;
+}
+
+.content-table tbody tr td:nth-of-type(even){
+    border-left: 1px solid #008dc5;
+}
+
+.open{
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: 47px;
+    height: 40px;
+    background-color: #dde1e7;
+    background-image: url(icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-left: 1px solid rgba(94,104,121, .288);
+}
+
+.login{
+    width: 100%;
+    height: 710px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #dde1e7;
+}
+
+.form{
+    background-color: #dde1e7;
+    width: 570px;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-shadow:  -3px -3px 7px #ffffff73,   3px 3px 5px rgba(94,104,121, .288);
+    border-radius: 10px;
+}
+
+.form > p {
+    letter-spacing: normal;
+    margin-top: 10px;
+    color: tomato;
+}
+
+input{
+    outline: none;
+    width: 100%;
+    height: 40px;
+    margin: 20px 0; 
+    padding-left: 10px;
+    color: #008dc5;
+    background-color: #dde1e7;
+    border: none;
+    box-shadow: inset -3px -3px 7px #ffffff73, inset  3px 3px 5px rgba(94,104,121, .288);
+
+}
+
+.form button {
+    width: 100%;
+    height: 40px;
+    background-color: #dde1e7;
+    border: none;
+    margin-top: 10px;
+    box-shadow: inset 3px 3px 7px #ffffff73, inset  -3px -3px 5px rgba(94,104,121, .288);
+
+}
+
+.form button:hover{
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94,104,121, .288);
+
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: tomato;
+    opacity: 1; /* Firefox */
+  }
+
+  #password{
+    color: #008dc528;
+  }
+
+
+#randomNumberGame input {
+    width: 100px;
+    margin: 0 auto;
+}
